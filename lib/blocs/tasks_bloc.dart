@@ -268,7 +268,7 @@ class _TasksBloc {
           final version = await DeviceInfoPlugin().androidInfo;
           if (version.version.sdkInt == 29) {
             // Android 10 has problems with file access.
-            // This allows us to at least save images somewhere accessible
+            // This allows us to at least save images somewhere accessible to end user
             final Directory? extDir = await getExternalStorageDirectory();
             externalDirectory = Directory("${extDir!.path}/stable-diffusion");
           }
